@@ -1,0 +1,962 @@
+
+body{
+    padding: 0;
+    margin: 0;
+    color: #fff;
+}
+.navbar {
+    background: linear-gradient(135deg, #ffffff, #e6e6ff);
+    padding: 12px 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease-in-out;
+}
+
+/* Brand Logo */
+.navbar-brand img {
+    height: 50px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar-brand:hover img {
+    transform: scale(1.1);
+}
+
+/* Brand Text */
+.navbar-brand span {
+    font-size: 24px;
+    color: #5e5e7a;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-brand:hover span {
+    color: #ff9800;
+}
+
+/* Navbar Links */
+.navbar-nav .nav-link {
+    font-size: 18px;
+    color: darkblue;
+    font-weight: 500;
+    margin: 0 10px;
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ff9800;
+    transform: scale(1.1);
+}
+
+/* Register Button */
+.register-btn {
+    background: transparent;
+    color: darkblue;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 2px solid #ff9800;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.register-btn:hover {
+    background: #ff9800;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* 🌍 Responsive Styles */
+@media (max-width: 991px) {
+    .navbar {
+        background: #ffffff;
+    }
+
+    .navbar-nav {
+        padding-top: 10px;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 16px;
+        margin: 5px 0;
+        padding: 10px;
+        display: block;
+        border-radius: 5px;
+        transition: background 0.3s ease-in-out;
+    }
+
+    .navbar-nav .nav-link:hover {
+        background: #ff9800;
+        color: white;
+        transform: none;
+    }
+
+    .register-btn {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+        padding: 12px;
+    }
+}
+.hero-section {
+    position: relative;
+    height: 100vh;
+    background: url(taweer.jpg) no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* color: white; */
+    border: 5px solid orange;
+}
+
+/* 🔥 Dark Overlay for Better Readability */
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: rgba(0, 0, 0, 0.5); */
+}
+
+/* 🎯 Hero Content */
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 20px;
+}
+
+/* 🏆 Title Styling */
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 15px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* 📜 Subtitle */
+.hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 1.2s ease-in-out;
+}
+
+/* 🗓 Event Details */
+.hero-details {
+    font-size: 1.2rem;
+    font-weight: 400;
+    opacity: 0.9;
+    margin-bottom: 30px;
+    animation: fadeInUp 1.4s ease-in-out;
+}
+
+/* ✨ Button Styling */
+.hero-btn {
+    background: orange;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 12px 30px;
+    border-radius: 30px;
+    border: 2px solid orange;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    animation: fadeInUp 1.6s ease-in-out;
+}
+
+.hero-btn:hover {
+    background: white;
+    color: orange;
+    transform: scale(1.1);
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .hero-details {
+        font-size: 1rem;
+    }
+
+    .hero-btn {
+        font-size: 1rem;
+        padding: 10px 25px;
+    }
+}
+
+/* 🎬 Fade-in Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about-section {
+    background: linear-gradient(135deg, #ffffff, #f5f5ff);
+    padding: 80px 20px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+/* 🏆 Section Title */
+.section-title {
+    font-size: 2.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* 🎨 Underline Effect */
+.section-title::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 60px;
+    height: 4px;
+    background: orange;
+    transform: translateX(-50%);
+    border-radius: 2px;
+    transition: width 0.3s ease-in-out;
+}
+
+.section-title:hover::after {
+    width: 100px;
+}
+
+/* 📜 About Text */
+.about-text {
+    font-size: 1.2rem;
+    color: #444;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: auto;
+    padding: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* ✨ Hover Effect on Text */
+.about-text:hover {
+    transform: scale(1.03);
+    color: darkblue;
+}
+
+/* 🎯 Highlighted Words */
+.about-text span {
+    font-weight: bold;
+    color: #ff9800;
+}
+
+.about-text b {
+    color: #0056b3;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .about-text {
+        font-size: 1.1rem;
+        padding: 5px;
+    }
+}
+/* 🌟 Objectives Section */
+.objectives-section {
+    background: linear-gradient(135deg, #ffffff, #f9f9ff);
+    padding: 80px 20px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+/* 🏆 Section Title */
+.section-title {
+    font-size: 2.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* 🎨 Underline Effect */
+.section-title::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 70px;
+    height: 4px;
+    background: orange;
+    transform: translateX(-50%);
+    border-radius: 2px;
+    transition: width 0.3s ease-in-out;
+}
+
+.section-title:hover::after {
+    width: 100px;
+}
+
+/* 📜 Objectives List */
+.objectives-list {
+    list-style: none;
+    padding: 0;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* 🎯 List Items */
+.objectives-list li {
+    font-size: 1.2rem;
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+/* 🖱 Hover Effects */
+.objectives-list li:hover {
+    transform: scale(1.03);
+    background: #ff9800;
+    color: white;
+}
+
+/* 🎨 Icons */
+.objectives-list i {
+    font-size: 1.5rem;
+    color: #ff9800;
+    transition: color 0.3s ease-in-out;
+}
+
+.objectives-list li:hover i {
+    color: white;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .objectives-list li {
+        font-size: 1.1rem;
+        padding: 12px;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+/* 🌟 Participants Section */
+.participants-section {
+    background: linear-gradient(135deg, #ffffff, #f9f9ff);
+    padding: 80px 20px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+/* 🏆 Section Title */
+.section-title {
+    font-size: 2.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* 🎨 Underline Effect */
+.section-title::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 70px;
+    height: 4px;
+    background: orange;
+    transform: translateX(-50%);
+    border-radius: 2px;
+    transition: width 0.3s ease-in-out;
+}
+
+.section-title:hover::after {
+    width: 100px;
+}
+
+/* 📜 Participants List */
+.participants-list {
+    list-style: none;
+    padding: 0;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* 🎯 List Items */
+.participants-list li {
+    font-size: 1.2rem;
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+/* 🖱 Hover Effects */
+.participants-list li:hover {
+    transform: scale(1.03);
+    background: #ff9800;
+    color: white;
+}
+
+/* 🎨 Icons */
+.participants-list i {
+    font-size: 1.5rem;
+    color: #ff9800;
+    transition: color 0.3s ease-in-out;
+}
+
+.participants-list li:hover i {
+    color: white;
+}
+
+/* 🌍 Participating Countries */
+.participating-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 40px;
+    color: darkblue;
+}
+
+.countries-text {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 900px;
+    margin: auto;
+    padding: 15px;
+    background: #fff;
+    border-left: 5px solid #ff9800;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .participants-list li {
+        font-size: 1.1rem;
+        padding: 12px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .countries-text {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}
+/* 🌟 Highlights Section */
+.highlights-section {
+    background: linear-gradient(135deg, #f9f9ff, #ffffff);
+    padding: 80px 20px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+/* 🏆 Section Title */
+.section-title {
+    font-size: 2.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* 🎨 Underline Effect */
+.section-title::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 70px;
+    height: 4px;
+    background: orange;
+    transform: translateX(-50%);
+    border-radius: 2px;
+    transition: width 0.3s ease-in-out;
+}
+
+.section-title:hover::after {
+    width: 100px;
+}
+
+/* 📜 Feature Cards */
+.feature-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* 🖱 Hover Effects */
+.feature-card:hover {
+    transform: scale(1.05);
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+    background: #ff9800;
+    color: white;
+}
+
+/* 🎨 Icons */
+.icon-box {
+    font-size: 2.5rem;
+    color: #ff9800;
+    margin-bottom: 15px;
+    transition: color 0.3s ease-in-out;
+}
+
+.feature-card:hover .icon-box {
+    color: white;
+}
+
+/* 📝 Text Styles */
+.feature-card h5 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .feature-card {
+        padding: 15px;
+    }
+}
+
+/* 🌟 Background & Section Styles */
+.itinerary-section {
+    background: linear-gradient(135deg, #f8f9fa, #ffffff);
+    padding: 80px 20px;
+    text-align: center;
+}
+
+/* 🏆 Section Title */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* 🎨 Title Underline Effect */
+.section-title::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 80px;
+    height: 4px;
+    background: #ff9800;
+    transform: translateX(-50%);
+    border-radius: 2px;
+    transition: width 0.3s ease-in-out;
+}
+
+.section-title:hover::after {
+    width: 100px;
+}
+
+/* 📜 Itinerary Cards */
+.itinerary-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: left;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.itinerary-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+    background: #ff9800;
+    color: white;
+}
+
+.itinerary-card:hover p, .itinerary-card:hover ul li {
+    color: white;
+}
+
+/* 🎨 Icons */
+.icon-box {
+    font-size: 2.5rem;
+    color: #ff9800;
+    margin-bottom: 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.itinerary-card:hover .icon-box {
+    color: white;
+}
+
+/* 📝 Text Styles */
+.itinerary-card h5 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.theme {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.itinerary-card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* 🗒 List Styling */
+.itinerary-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.itinerary-card ul li {
+    font-size: 1rem;
+    padding: 5px 0;
+    position: relative;
+    color: #444;
+}
+
+.itinerary-card ul li::before {
+    content: "✔";
+    color: #ff9800;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .itinerary-card {
+        padding: 20px;
+    }
+}
+
+/* 🌟 Background & Section Styles */
+.pricing-section {
+    background: linear-gradient(135deg, #f8f9fa, #ffffff);
+    padding: 80px 20px;
+    text-align: center;
+}
+
+/* 🏆 Section Title */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* 🎨 Title Underline Effect */
+.section-title::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 80px;
+    height: 4px;
+    background: #ff9800;
+    transform: translateX(-50%);
+    border-radius: 2px;
+    transition: width 0.3s ease-in-out;
+}
+
+.section-title:hover::after {
+    width: 100px;
+}
+
+/* 📜 Pricing Cards */
+.pricing-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: left;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+    background: #ff9800;
+    color: white;
+}
+
+.pricing-card:hover h6, .pricing-card:hover ul li {
+    color: white;
+}
+
+/* 🎨 Icons */
+.icon-box {
+    font-size: 2.5rem;
+    color: #ff9800;
+    margin-bottom: 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.pricing-card:hover .icon-box {
+    color: white;
+}
+
+/* 📝 Text Styles */
+.pricing-card h5 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff9800;
+    margin-bottom: 10px;
+}
+
+.pricing-card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* 🗒 List Styling */
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.pricing-card ul li {
+    font-size: 1rem;
+    padding: 5px 0;
+    position: relative;
+    color: #444;
+}
+
+.pricing-card ul li::before {
+    content: "✔";
+    color: #ff9800;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .pricing-card {
+        padding: 20px;
+    }
+}
+
+/* 🌟 Background & Section Styling */
+.register-section {
+    background: white;
+    padding: 80px 20px;
+    text-align: center;
+    color:black;
+}
+
+/* 🎨 Section Title */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* 🏆 Underline Effect */
+.section-title::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 80px;
+    height: 4px;
+    background: white;
+    transform: translateX(-50%);
+    border-radius: 2px;
+    transition: width 0.3s ease-in-out;
+}
+
+.section-title:hover::after {
+    width: 100px;
+}
+
+/* 📝 Register Button */
+.register-btn {
+    display: inline-block;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 15px 30px;
+    color: #ff5722;
+    background: white;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 🎨 Hover Effect */
+.register-btn:hover {
+    background: #ff5722;
+    color: white;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .register-btn {
+        font-size: 1.1rem;
+        padding: 12px 25px;
+    }
+}
+
+/* 🌙 Stylish Footer */
+.custom-footer {
+    background: #111;
+    color: white;
+    padding: 30px 20px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* 🔗 Footer Links */
+.footer-links {
+    margin: 10px 0;
+}
+
+.footer-links a {
+    color: #f0a500;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-links a:hover {
+    color: #ffcc00;
+}
+
+/* 🌐 Social Media Icons */
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 5px;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+    background: #f0a500;
+    color: black;
+    transform: scale(1.1);
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+    .custom-footer {
+        font-size: 0.9rem;
+    }
+
+    .social-icon {
+        font-size: 1rem;
+        padding: 8px;
+    }
+}
